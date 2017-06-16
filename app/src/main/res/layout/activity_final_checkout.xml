@@ -1,0 +1,57 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activity.MainActivity">
+
+    <include
+        android:id="@+id/toolbar"
+        layout="@layout/toolbar" />
+
+    <ListView
+        android:id="@+id/listCartItemInFinalCheckOut"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/toolbar_bottom_in_final_checkout"
+        android:layout_below="@+id/toolbar"
+        android:layout_marginTop="2dp"
+        android:divider="@android:color/transparent"
+        android:dividerHeight="0.5sp" />
+
+    <android.support.v7.widget.Toolbar
+        xmlns:local="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/toolbar_bottom_in_final_checkout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#E648F3"
+        android:minHeight="64dp"
+        local:popupTheme="@style/ThemeOverlay.AppCompat.Light"
+        local:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+        android:layout_alignParentBottom="true"
+        >
+
+        <LinearLayout android:layout_height="match_parent"
+            android:layout_width="match_parent"
+            android:orientation="horizontal"
+            >
+            <TextView android:layout_height="wrap_content"
+                android:id="@+id/tv_total_price_final_cart"
+                android:layout_width="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                />
+
+            <View
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_weight="1" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_arrow_right"
+                android:layout_marginRight="20dp"
+                android:layout_marginEnd="20dp"
+                />
+        </LinearLayout>
+    </android.support.v7.widget.Toolbar>
+</RelativeLayout>
